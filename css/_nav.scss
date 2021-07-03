@@ -1,0 +1,185 @@
+nav {
+    display: none;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+
+    .logo{
+        width: 14rem;
+        margin: 2.4rem 0 0 2.4rem;
+        user-select: none;
+        overflow: visible;
+    }
+
+    .hamburger-menu, nav #close-icon, .nav-list li {
+        cursor: pointer;
+        transition: all 1s ease-out;
+
+        &:hover {
+            transform: scale(.95);
+            transition: all 0.4s ease-in;
+        }
+    }
+
+    .hamburger-menu {
+        z-index: 10000;
+        position: fixed;
+        padding: .8rem;
+        top: 0;
+        right: 0;
+        border-radius: .8rem;
+        margin: 1.6rem 1.6rem 0 0;
+    }
+
+    nav.menu-btn {
+        display: block;
+        transition: ease-out;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 999999;
+        width: 100%;
+        height: 100vh;
+        min-height: 60rem;
+        right: 0;
+        top: 0;
+        overflow: none;
+        animation: navig .3s ease alternate;
+
+        #close-icon {
+            position: absolute;
+            top: 2.4rem;
+            right: 2.4rem;
+        }
+
+        .nav-list {
+            font-family: $secondary-font;
+            height: 70%;
+            min-height: 30rem;
+            width: 100%;
+            @include flexy;
+            font-size: 2.2rem;
+            font-weight: bold;
+            user-select: none;
+            padding: 2rem auto;
+
+            li  {
+                display: block;
+                padding: 2.4rem;
+
+                a {
+                    transition: all 1s ease-out;
+
+                    &:hover {
+                        transform: scale(.98);
+                        transition: all .4s ease-in;
+                    }
+                }
+            }
+        }
+
+        .nav-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 30%;
+            @include flexy;
+
+            h4 {
+                font-size: 2.2rem;
+                font-weight: 400;
+            }
+            .social-box {
+                padding: 3rem;
+            }
+        }
+
+        .on-hover {
+            display: none;
+        }
+    }
+}
+
+@keyframes navig {
+    0% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .hamburger-menu, #close-icon {
+        display: none;
+    }
+    
+    header {
+        height: unset;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0 0 2rem;
+        
+        nav {
+            position: relative;
+            height: unset;
+            min-height: unset;
+            display: inline-block;
+            flex-direction: row;
+            background-color: unset;
+            animation: none;
+            overflow: none;
+    
+            .nav-list {
+                height: 100%;
+                min-height: unset;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: auto;
+                font-size: 2rem;
+                padding: 0;
+    
+                li  {
+                    margin-right: 3.4rem;
+                    padding: 0;
+                }
+            }
+
+            .nav-bottom {
+                display: none;
+            }
+        }
+
+        .logo {
+            width: 12rem;
+            margin: 0;
+            user-select: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    header {
+
+        nav {
+            .nav-list {
+                height: auto;
+
+                li  {
+                    margin-right: 4rem;
+                }
+            }
+        }
+    }
+}

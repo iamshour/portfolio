@@ -1,0 +1,1026 @@
+.directions {
+    width: 100%;
+    height: auto;
+    display: flex;
+    place-content: center;
+    margin: 6rem auto 4rem auto;
+
+    svg {
+        margin: 0 1.6rem;
+        max-width: 50rem;
+
+        .current {
+
+            .stroke {
+                stroke: #A6160A;
+            }
+
+            .bg {
+                fill: #EE4637;
+            }
+
+            .text {
+                fill: white;
+            }
+            .man {
+                display: inline-block;
+            }
+        }
+    }
+
+    .lobby:hover, .bio:hover, .hobbies:hover, .degrees:hover,
+    .lobby:active, .bio:active, .hobbies:active, .degrees:active {
+        
+        g {
+            .stroke {
+                stroke: #dda165;
+                transition: all 0.4s ease-in;
+            }
+
+            .bg {
+                fill: #f3d6b7;
+                transition: all 0.4s ease-in;
+            }
+        }
+
+        transform: scale(.95);
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: all 0.4s ease-in;
+    }
+    .lobby:not(:hover), .bio:not(:hover), .hobbies:not(:hover), .degrees:not(:hover) {
+        
+        g {
+            .stroke, .bg, .text {
+                transition: all 1s ease-out;
+            }
+        }
+
+        transform-origin: center;
+        transform-box: fill-box;
+        transition: all 1s ease-out;
+    }
+}
+
+.about-nav {
+    background-color: $bg-very-light;
+}
+
+.lobby {
+    width: 100%;
+    height: auto;
+    
+    @include flexy;
+}
+
+.about-page {
+    background-color: #68cce9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%2368cce9'/%3E%3Cstop offset='1' stop-color='%23698ec5'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%2368c5e6'/%3E%3Cstop offset='1' stop-color='%235d87c4'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%2367bfe3'/%3E%3Cstop offset='1' stop-color='%23517fc4'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%2367b9e0'/%3E%3Cstop offset='1' stop-color='%234478c4'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%2367b3dd'/%3E%3Cstop offset='1' stop-color='%233970c4'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%2367adda'/%3E%3Cstop offset='1' stop-color='%23336abd'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%2367a7d7'/%3E%3Cstop offset='1' stop-color='%232d64b6'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%2367a1d3'/%3E%3Cstop offset='1' stop-color='%23285eaf'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%23689cd0'/%3E%3Cstop offset='1' stop-color='%232358a8'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%236897cc'/%3E%3Cstop offset='1' stop-color='%231e52a0'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%236892c9'/%3E%3Cstop offset='1' stop-color='%231a4c98'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23698ec5'/%3E%3Cstop offset='1' stop-color='%23164690'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg %3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    .lobby {
+        
+        img {
+            width: 13rem;
+        }
+    }
+
+    .hero {
+        margin: 4rem auto;
+        width: 100%;
+        height: auto;
+       @include flexy;
+
+       .img-area {
+           width: 100%;
+           height: auto;
+           display: flex;
+           place-content: center;
+           position: relative;
+           margin: 8rem auto 4rem auto;
+        
+           svg {
+               width: 30rem;
+               overflow: visible;
+               transition: 2s ease-in;
+           }
+           
+           img {
+               width: 25rem;
+               position: absolute;
+               bottom: 4px;
+           }
+
+           &:hover, &:active {
+                #bubble-1 {
+                    transform: scale(1.04, 1.04);
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: all 4s ease-in;
+                }
+                #bubble-2 {
+                    transform: translate(-8px, 20px) scale(1.5);
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: all 4s ease-in;
+                }
+            }
+       }
+
+       .img-area:not(:hover), .img-area:not(:active) {
+
+            #bubble-1 {
+                transition: all 2s ease-out;
+                transform-origin: center;
+                transform-box: fill-box;
+            }
+            #bubble-2 {
+                transition: all 2s ease-out;
+                transform-origin: center;
+                transform-box: fill-box;
+            }
+        }
+
+       .text-area {
+           width: 100%;
+           height: auto;
+           padding: 1rem;
+
+           .card {
+               position: relative;
+               margin: 0 1.6rem;
+           }
+
+           .card:before {
+               position: absolute;
+               content: '';
+               z-index: -1;
+               background: $glass;
+               filter: blur(15px);
+               width: 100%;
+               height: 100%;
+               border-radius: 2.4rem;
+               top: 0;
+               left: 0;
+           }
+
+           p {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                font-weight: normal;
+                padding: 1.6rem;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.bio-page, .degrees-page, .hobbies-page {
+    background-color: #b4e6f4;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23164690' fill-opacity='0.2'%3E%3Cpath fill-rule='evenodd' d='M41 37.59V25h-2v12.59l-8.9-8.9-1.41 1.41 8.9 8.9H25v2h12.59l-8.9 8.9 1.41 1.41 8.9-8.9V55h2V42.41l8.9 8.9 1.41-1.41-8.9-8.9H55v-2H42.41l8.9-8.9-1.41-1.41-8.9 8.9zM1 1h2v2H1V1zm0 4h2v2H1V5zm0 4h2v2H1V9zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm0 4h2v2H1v-2zm4 0h2v2H5v-2zm4 0h2v2H9v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM5 1h2v2H5V1zm4 0h2v2H9V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1zm0 4h2v2h-2V5zm0 4h2v2h-2V9zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zM5 5h70v70H5V5zm2 68h66V7H7v66zM9 9h62v62H9V9zm2 60h58V11H11v58zm2-39.6V13h16.4A29.1 29.1 0 0 0 13 29.4zM15 15v6.67A31.17 31.17 0 0 1 21.67 15H15zm-2 52V50.6A29.1 29.1 0 0 0 29.4 67H13zm2-8.67V65h6.67A31.17 31.17 0 0 1 15 58.33zM67 67H50.6A29.1 29.1 0 0 0 67 50.6V67zm-8.67-2H65v-6.67A31.17 31.17 0 0 1 58.33 65zM67 13v16.4A29.1 29.1 0 0 0 50.6 13H67zm-2 8.67V15h-6.67A31.17 31.17 0 0 1 65 21.67zM39 13h2v2h-2v-2zm7.02.66l1.93.52-.51 1.93-1.94-.52.52-1.93zm6.61 2.46l1.74 1-1 1.73-1.74-1 1-1.73zm5.75 4.08l1.42 1.42-1.42 1.4-1.4-1.4 1.4-1.42zm4.5 5.43l1 1.74-1.73 1-1-1.74 1.73-1zm2.94 6.42l.52 1.93-1.93.52-.52-1.94 1.93-.51zM67 39v2h-2v-2h2zm-.66 7.02l-.52 1.93-1.93-.51.52-1.94 1.93.52zm-2.46 6.61l-1 1.74-1.73-1 1-1.74 1.73 1zm-4.08 5.75l-1.42 1.42-1.4-1.42 1.4-1.4 1.42 1.4zm-5.43 4.5l-1.74 1-1-1.73 1.74-1 1 1.73zM41 67h-2v-2h2v2zm6.95-1.18l-1.93.52-.52-1.93 1.94-.52.51 1.93zm-13.97.52l-1.93-.52.51-1.93 1.94.52-.52 1.93zm-6.61-2.46l-1.74-1 1-1.73 1.74 1-1 1.73zm-5.75-4.08l-1.42-1.42 1.42-1.4 1.4 1.4-1.4 1.42zm-4.5-5.43l-1-1.74 1.73-1 1 1.74-1.73 1zm-2.94-6.42l-.52-1.93 1.93-.52.52 1.94-1.93.51zM13 41v-2h2v2h-2zm.66-7.02l.52-1.93 1.93.51-.52 1.94-1.93-.52zm2.46-6.61l1-1.74 1.73 1-1 1.74-1.73-1zm4.08-5.75l1.42-1.42 1.4 1.42-1.4 1.4-1.42-1.4zm5.43-4.5l1.74-1 1 1.73-1.74 1-1-1.73zm6.42-2.94l1.93-.52.52 1.93-1.94.52-.51-1.93zM40 63a23 23 0 1 1 0-46 23 23 0 0 1 0 46zm0-2a21 21 0 1 0 0-42 21 21 0 0 0 0 42zm0-2a19 19 0 1 1 0-38 19 19 0 0 1 0 38zm0-2a17 17 0 1 0 0-34 17 17 0 0 0 0 34z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bio-page {
+
+    .ill {
+        svg {
+            @include svg-hov;
+        }
+    }
+
+    .screen {
+        width: 100%;
+        height: auto;
+        margin: 8rem auto 4rem auto;
+
+        svg {
+            margin: 0 3rem;
+            max-width: 30rem;
+
+            #moving-text {
+                animation: moving-text 4s ease-in-out infinite;
+            }
+
+            @keyframes moving-text {
+                0% {
+                    transform: translateX(15px);
+                }
+                50% {
+                    transform: translateX(50px);
+                }
+                100% {
+                    transform: translateX(15px);
+                }
+            }
+        }
+    }
+
+    section {
+        @include text-bg;
+        @include flexy;
+        padding: 2rem;
+        margin-bottom: 8rem;
+
+        h3 {
+            text-align: left;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 2rem;
+            color: black;
+            margin: 2rem 0; 
+            align-self: flex-start;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+    }
+
+    .bio-2 {
+        .ill {
+            margin: 2rem auto;
+            width: 100%;
+            display: flex;
+            place-content: center;
+
+            svg {
+                margin: 0 4rem;
+                max-width: 30rem;
+
+                #w-hand {
+                    animation: w-hand 4s ease-in-out infinite;
+
+                    @keyframes w-hand {
+                        0% {
+                            transform: translate(0, 0);
+                        }
+                        50% {
+                            transform: translate(1px, 2px);
+                        }
+                        100% {
+                            transform: translate(0, 0);
+                        }
+                    }
+                }
+                #tray {
+                    animation: tray 4s ease-in-out infinite;
+                    transform-box: fill-box;
+                    transform-origin: center;
+
+                    @keyframes tray {
+                        0% {
+                            transform: rotate(2deg);
+                        }
+                        50% {
+                            transform: rotate(-2deg);
+                        }
+                        100% {
+                            transform: rotate(2deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bio-3 {
+        .ill {
+            margin: 2rem auto;
+            width: 100%;
+            display: flex;
+            place-content: center;
+
+            svg {
+                max-width: 40rem;
+
+                #hand4 {
+                    animation: pc-hand 3s ease-in-out infinite;
+                    overflow: hidden;
+
+                    @keyframes pc-hand {
+                        0% {
+                            transform: translateY(0);
+                        }
+                        50% {
+                            transform: translateY(-16px);
+                        }
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+                #cursor {
+                    animation: cursor 6s ease-in-out infinite;
+
+                    @keyframes cursor {
+                        0% {
+                            transform: translate(0, 0);
+                        }
+                        50% {
+                            transform: translate(44px, -14px);
+                        }
+                        100% {
+                            transform: translate(0, 0);
+                        }
+                    }
+                }
+                #smoke {
+                    animation: smoky 6s ease-in-out infinite;
+                    opacity: 0.1;
+
+                    @keyframes smoky {
+                        0% {
+                            opacity: 0.2;
+                            transform: translateY(3px);
+                        }
+                        50% {
+                            opacity: 0.8;
+                            transform: translateY(-8px);
+                        }
+
+                        100% {
+                            opacity: 0;
+                            transform: translateY(-14px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bio-4 {
+        padding-top: 4rem;
+
+        .ill {
+            margin: 2rem auto;
+            width: 100%;
+            display: flex;
+            place-content: center;
+
+            svg {
+                max-width: 30rem;
+
+                #hand5 {
+                    animation: grad 3s ease-in-out infinite;
+                    overflow: hidden;
+
+                    @keyframes grad {
+                        0% {
+                            transform: translate(0, 0);
+                        }
+                        50% {
+                            transform: translate(2px, 3px);
+                        }
+                        100% {
+                            transform: translate(0, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hobbies-page {
+
+    .ill {
+        svg {
+            @include svg-hov;
+        }
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        margin: 8rem 2rem;
+
+        .card {
+            background: #B4E6F4;
+            border: .2rem solid #94C6E0;
+            border-radius: .6rem 4.6rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: auto;
+            max-width: 28rem;
+
+            h3 {
+                font-size: 2.4rem;
+                margin-left: -1rem;
+            }
+
+            img {
+                margin: .8rem 0;
+            }
+        }
+    }
+
+    section {
+        @include text-bg;
+        @include flexy;
+        padding: 4rem 2rem 2rem 2rem;
+        margin-bottom: 8rem;
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        .ill {
+            margin: 2rem auto;
+            width: 100%;
+            display: flex;
+            place-content: center;
+        }
+    }
+
+    .hobby-1 {
+        svg {
+            margin: 0 4rem;
+            max-width: 26rem;
+            overflow: visible;
+
+            #shoes {
+                animation: shoes 2s ease-in-out infinite alternate;
+                transform-origin: right;
+                transform-box: fill-box;
+
+                @keyframes shoes {
+                    0% {
+                        transform: rotate(8deg);
+                    }
+                    70% {
+                        transform: rotate(-4deg);
+                    }
+                }
+            }
+            #leg {
+                animation: leg 2s ease-in-out infinite alternate;
+                transform-origin: top right;
+                transform-box: fill-box;
+
+                @keyframes leg {
+                    0% {
+                        transform: translateY(2px);
+                    }
+                    100% {
+                        transform: translateY(4px);
+                    }
+                }
+            }
+            #right-hand {
+                animation: rhand 2s ease-in-out infinite alternate;
+                transform-origin: right;
+                transform-box: fill-box;
+
+                @keyframes rhand {
+                    0% {
+                        transform: rotate(-2deg);
+                    }
+                    70% {
+                        transform: rotate(6deg);
+                    }
+                }
+            }
+            #left-hand {
+                animation: lhand 2s ease-in-out infinite alternate;
+                transform-origin: top left;
+                transform-box: fill-box;
+
+                @keyframes lhand {
+                    0% {
+                        transform: rotate(5deg);
+                    }
+                    70% {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            #ball {
+                animation: ball 1s ease-out infinite alternate;
+                @keyframes ball {
+                    0% {
+                        transform: translate(0, 0px)
+                    }
+                    100% {
+                        transform: translate(-10px, -70px)
+                    }
+                }
+            }
+        }
+    }
+
+    .hobby-2 {
+        svg {
+            max-width: 50rem;
+            overflow: visible;
+
+            #hand-first {
+                animation: hand-1 2s ease-in-out infinite alternate;
+
+                @keyframes hand-1 {
+                    0% {
+                        transform: translate(-2px, 0);
+                    }
+                    50% {
+                        transform: translate(0px, 8px);
+                    }
+                    100% {
+                        transform: translate(-2px, 0);
+                    }
+                }
+            }
+            #hand-second {
+                animation: hand-2 2s ease-in-out infinite alternate;
+
+                @keyframes hand-2 {
+                    0% {
+                        transform: translate(0, 3px);
+                    }
+                    50% {
+                        transform: translate(-2px, -1px);
+                    }
+                    100% {
+                        transform: translate(0, 3px);
+                    }
+                }
+            }
+            #head-first, #head-second {
+                animation: head-1 1s ease-in-out infinite alternate;
+                transform-box: fill-box;
+                transform-origin: center;
+
+                @keyframes head-1 {
+                    0% {
+                        transform: rotate(-5deg);
+                    }
+                    0% {
+                        transform: rotate(5deg);
+                    }
+                    0% {
+                        transform: rotate(-5deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.degrees-page {
+
+    .hero {
+        width: 100%;
+        height: auto;
+        margin: 10rem 0 14rem 2rem;
+        position: relative;
+            
+        &::before {
+            position: absolute;
+            content: "Note: All official documents are available upon request.";
+            font-size: 1.8rem;
+            color: $bg-dark;
+            background: $glass;
+            border-radius: 1.6rem;
+            padding: 1rem;
+            max-width: 80vw;
+            left: 0;
+            bottom: -8rem;
+            font-weight: 700;
+            font-style: italic;
+            opacity: 0;
+            animation: pop 8s ease-in-out forwards 1.5s;
+
+            @keyframes pop {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-200px);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                0% {
+                    opacity: 0;
+                    transform: translateX(-100px);
+                }
+            }
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 8rem 2rem;
+        
+        p {
+            position: relative;
+            padding: 1.6rem 2rem 1.6rem 1.6rem;
+            font-size: 2rem;
+            font-weight: 700;
+            font-style: italic;
+            color: $bg-dark;
+            
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: $glass;
+                border-radius: .8rem;
+                filter: blur(8px);
+                z-index: -1;
+                top: 0;
+                left: 0;
+            }
+
+            &:after {
+                position: absolute;
+                content: "_";
+                color: black;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2.4rem;
+                animation: dash .8s ease-out infinite;
+
+                @keyframes dash {
+                    from {
+                        opacity: 1;
+                    }
+                    to {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        @include flexy;
+        margin: 0 auto 14rem auto; 
+    }
+
+    .certificate {
+        position: relative;
+        margin-bottom: 8rem;
+        @include svg-hov;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        img:nth-of-type(1) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        img:nth-of-type(2) {
+            width: 25rem;
+            cursor: pointer;
+        }
+    }
+
+    .modal {
+        position: fixed;
+        z-index: 400000000;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: visibility 0s, opacity 0.3s ease-in;
+        visibility: hidden;
+        opacity: 0;
+
+        .modal-img {
+            max-width: 85%;
+            height: auto;
+            @include flexy;
+        }
+
+        .close-mod {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: $glass;
+            padding: 1rem;
+            border-radius: 50%;
+            transition: all 1s ease-out;
+            cursor: pointer;
+
+            &:hover, &:active {
+                transform: scale(.95);
+                transition: all 0.4s ease-in;
+            }
+        }
+    }
+
+    .modal.appear {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .directions {
+        margin: 14rem auto 6rem auto;
+    }
+
+    .about-nav {
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .about-page {
+        .hero {
+            margin: 10rem auto;
+            flex-direction: row-reverse;
+    
+           .img-area {
+               flex-basis: 50rem;
+               margin: 0 2rem;
+            
+               svg {
+                   width: 34rem;
+               }
+               
+               img {
+                   width: 30rem;
+               }
+           }
+    
+           .text-area {
+               padding: 0;
+               margin: 0 2rem;
+    
+               .card {
+                   margin: 0;
+               }
+    
+               p {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+    .bio-page {
+
+        section {
+            padding: 3rem;
+        }
+
+        .bio-2, .bio-3, .bio-4 {
+            .ill {
+                margin: 0;
+                width: 30vw;
+    
+                svg {
+                    margin: 0;
+                }
+            }
+            .text {
+                width: 60vw;
+            }
+        }
+
+        .bio-2, .bio-4 {
+            flex-direction: row-reverse;
+            
+            .text {
+                margin-left: 3rem;
+            }
+        }
+
+        .bio-3 {
+            flex-direction: row;
+            
+            .text {
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    .hobbies-page {
+
+        .hero {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card {
+                margin: 8rem 3rem;
+            }
+    
+            .clock {
+                margin-right: 4rem;
+                align-self: flex-start;
+            }
+        }
+
+        .hobby-1, .hobby-2{
+            padding: 5rem 3rem 3rem 3rem;
+            .ill {
+                margin: 0;
+                width: 40vw;
+    
+                svg {
+                    margin: 0;
+                }
+            }
+            .text {
+                width: 50vw;
+            }
+        }
+
+        .hobby-1 {
+            flex-direction: row;
+            
+            .text {
+                margin-right: 3rem;
+            }
+        }
+
+        .hobby-2 {
+            flex-direction: row-reverse;
+            
+            .text {
+                margin-left: 3rem;
+            }
+
+            .ill {
+                svg {
+                    width: 50rem;
+                }
+            }
+        }
+    }
+
+    .degrees-page {
+
+        .hero, .title {
+            margin-left: 3rem;
+        }
+
+        section {
+            padding: 0 10rem;
+            max-width: 92rem;
+            margin-bottom: 18rem;
+        }
+
+        section:nth-of-type(1) {
+
+            .certificate:nth-of-type(1) {
+                align-self: flex-end;
+            }
+            .certificate:nth-of-type(2) {
+                align-self: flex-start;
+            }
+        }
+
+        section:nth-of-type(2), section:nth-of-type(3), section:nth-of-type(4) {
+            .certificate:nth-of-type(2n+1) {
+                align-self: flex-end;
+            }
+            .certificate:nth-of-type(2n+2) {
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    
+    .about-page {
+        .hero {
+            margin: 14rem auto;
+            justify-content: space-around;
+    
+           .img-area {
+               flex-basis: 10rem;
+               margin: 0;
+            
+               svg {
+                   width: 36rem;
+               }
+               
+               img {
+                   width: 32rem;
+               }
+           }
+    
+           .text-area {
+               max-width: 67rem;
+               padding: 0;
+               margin: 0;
+    
+               p {
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    padding: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .bio-page {
+
+        .screen {
+            svg {
+                margin-left: 5rem;
+            }
+        }
+
+        section {
+            padding: 5rem;
+            
+            h3 {
+                font-size: 2.4rem;
+            }
+
+            .text {
+                flex-shrink: 2;
+            }
+        }
+    }
+
+     .hobbies-page {
+
+        .hero {
+            .card {
+                margin-left: 5rem;
+            }
+        }
+
+        .hobby-1, .hobby-2{
+            padding: 5rem;
+            
+            .ill {
+                flex-shrink: 2;
+                width: 100%;
+            }
+            .text {
+                width: 100%;
+            }
+        }
+
+        .hobby-2 {
+            
+            .text {
+                margin-left: 6rem;
+            }
+        }
+    }
+
+    .degrees-page {
+
+        .hero, .title {
+            margin-left: 5rem;
+        }
+
+        section {
+            max-width: 105rem;
+            margin-bottom: 22rem;
+        }
+
+        .certificate {
+            margin-bottom: 14rem;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            img:nth-of-type(1) {
+                width: 400px;
+            }
+    
+            img:nth-of-type(2) {
+                width: 340px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+
+    .degrees-page {
+        .hero {
+            img {
+                width: 34rem;
+            }
+        }
+    }
+}

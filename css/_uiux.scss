@@ -1,0 +1,1126 @@
+.carsam-page, .letstalk-page, .ronaldo-page, .shourco-page {
+
+    h1 {
+        color: black;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+
+        span {
+            font-size: 8rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        color: black;
+        font-weight: 700;
+        font-style: italic;
+        text-align: left;
+        margin-bottom: 1.6rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        font-weight: normal;
+    }
+
+    header {
+        .nav-list {
+    
+            li  {
+                a {
+                    color: black;
+    
+                    &:active {
+                        color: white;
+                    }
+                }
+            }
+    
+            #item2 {
+                color: black;
+    
+                &:active {
+                    color: white;
+                }
+            }
+        }
+    
+        .nav-bottom {
+            h4 {
+                color: black;
+            }
+        }
+    }
+
+    section {
+        padding: 3rem;
+        margin-bottom: 8rem;
+        text-align: left;
+        @include text-bg;
+
+        ul {
+            list-style: unset;
+        }
+    
+        ol, ul {
+            font-size: 1.7rem;
+            margin-top: 1.6rem;
+            letter-spacing: 1px;
+            line-height: 2.4rem;
+    
+            li {
+                margin-bottom: .8rem;
+            }
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-style: italic;
+            border-bottom: 1px solid rgba(0, 0, 0, .6);
+        }
+    }
+
+    .hero {
+        margin-bottom: 8rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .info-card {
+            text-align: center;
+            display: grid;
+            width: 80vw;
+            max-width: 40rem;
+            height: auto;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1.5fr repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            background: $glass;
+            border-radius: 2.4rem;
+            @include box-hov;
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                font-size: 1.7rem;
+            }
+
+            div {
+                padding: 1rem;
+
+                &:nth-child(7), &:nth-child(8) {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    .key {
+        margin: 0 auto;
+        margin-top: 4rem;
+        width: 80vw;
+        max-width: 40rem;
+        height: auto;
+        @include flexy;
+        @include box-hov;
+        border-radius: 6.2rem 0;
+
+        .row {
+            width: 100%;
+            height: auto;
+            @include flexy;
+            text-align: center;
+
+            &:first-child {
+                padding: 3rem 2rem 2rem 2rem;
+            }
+            &:last-child {
+                padding-bottom: 2.4rem;
+            }
+        }
+
+        .row {
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                font-size: 1.7rem;
+
+                span {
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+
+            .column {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                padding: 1rem;
+
+                p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &:first-child {
+                    padding-bottom: 2rem;
+                }
+
+                .circle {
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .action, .thoughts, .situation {
+        a {
+            color: black;
+            font-weight: 700;
+            font-style: italic;
+            user-select: none;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    footer {
+        background: $glass;
+        
+        .copyright {
+    
+            p {
+                color: black;
+            }
+        }
+    }
+    
+}
+
+.carsam-page, .letstalk-page {
+
+    section {
+
+        img {
+            width: 30rem;
+            height: auto;
+        }
+
+        .pic {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .hero {
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 6rem auto;
+            @include svg-hov;
+        }
+
+        svg {
+            width: 24rem;
+            height: auto;
+            margin: 6rem auto;
+            @include svg-hov;
+        }
+    }
+
+    .act-2 {
+
+        .info-1, .info-2, .info-3, .info-4, .info-5 {
+            margin-bottom: 8rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .vid-container, .pic {
+                margin-top: 4rem;
+            }
+
+            h4 {
+                margin-bottom: 2rem;
+            }
+            
+        }
+    }
+
+    .act-3 {
+        .vid-container {
+            margin-top: 4rem;
+        }
+    }
+
+    .vid-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        video {
+            border-radius: 23.83px;
+            width: 26.813rem;
+            height: auto;
+        }
+    }
+    
+    .vid-container::before {
+        position: absolute;
+        content: "";
+        width: 28.6rem;
+        height: 61.818rem;
+        border-radius: 37.24px;
+        background-color: #312E2E;
+        box-shadow: 4px 4px 15px #312E2E;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+}
+
+.carsam-page {
+    background-color: #FFD8D8;
+
+    header {
+        .hamburger-menu {
+            background-color: #FFD8D8;
+        }
+    
+        nav {
+            background-color: #FFD8D8;
+        }
+    }
+
+    .key {
+        background: #F2CFCF;
+        box-shadow: 4px 4px 15px rgba(97, 4, 4, 0.72);
+
+        .row {
+            
+            .col-2 {
+                .circle {
+                    background-color: #4F0303;
+                }
+            }
+            .col-3 {
+                .circle {
+                    background-color: #610404;
+                }
+            }
+            .col-4 {
+                .circle {
+                    background-color: #790808;
+                }
+            }
+            .col-5 {
+                .circle {
+                    background-color: #C08383;
+                }
+            }
+            .col-6 {
+                .circle {
+                    background-color: #F2F2F2;
+                }
+            }
+        }
+    }
+
+    .act-1 {
+        .vid-container {
+            margin-top: 4rem;
+        }
+    }
+
+    .act-2 {
+
+        .info-1 {
+            h4 {
+                margin: 4rem 0 2rem 0;
+                width: 18.5rem;
+            }
+        }
+        .info-4 {
+            h4 {
+                width: 21rem;
+            }
+        }
+        .info-5 {
+            h4 {
+                width: 19rem;
+            }
+        }
+    }
+
+    .act-4, .act-5, .act-6 {
+        .pic {
+            margin-top: 2rem;
+        }
+    }
+
+    .collection {
+
+        .screens {
+            @include flexy;
+            margin-top: 4rem;
+        }
+
+        img {
+            padding: 1rem;
+        }
+    }
+}
+
+.letstalk-page {
+    background-color: #C0E3ED;
+
+    header {
+        .hamburger-menu {
+            background-color: #C0E3ED;
+        }
+    
+        nav {
+            background-color: #C0E3ED;
+        }
+    }
+
+    svg {
+
+        #v1 {
+            animation: line 1s ease forwards;
+            opacity: 0;
+
+            @keyframes line {
+                
+                from {
+                    opacity: 0;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(51px);
+                }
+            }
+        }
+
+        #v2 {
+            animation: linee 1s ease forwards 0.5s;
+            opacity: 0;
+        }
+        #v3 {
+            animation: linee 1.5s ease forwards 1s;
+            opacity: 0;
+        }
+
+        @keyframes linee {
+            from {
+                opacity: 0;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(63px);
+            }
+        }
+    }
+
+    .key {
+        background: #D3F0F9;
+        box-shadow: 4px 4px 15px rgba(20, 83, 101, 0.72);
+
+        .row {
+            
+            .col-2 {
+                .circle {
+                    background-color: #287F98;
+                }
+            }
+            .col-3 {
+                .circle {
+                    background-color: #9FCEDC;
+                }
+            }
+            .col-4 {
+                .circle {
+                    background-color: #B5DAE5;
+                }
+            }
+            .col-5 {
+                .circle {
+                    background-color: #01AF85;
+                }
+            }
+            .col-6 {
+                .circle {
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .act-2 {
+
+        .info-1 {
+            h4 {
+                margin: 4rem 0 2rem 0;
+                width: 21.5rem;
+            }
+        }
+        .info-2 {
+            h4 {
+                width: 19.5rem;
+            }
+        }
+        .info-3 {
+            h4 {
+                width: 20.5rem;
+            }
+        }
+    }
+
+    .act-4, .act-5, .act-6 {
+        .vid-container {
+            margin-top: 4rem;
+        }
+    }
+
+    .prev-next {
+    
+        .next {
+            padding: .8rem;
+    
+            h3 {
+                font-size: 1.6rem;
+                margin: .8rem auto;
+            }
+    
+            p {
+                font-size: 1.6rem;
+                width: 14.8rem;
+                text-align: center;
+                line-height: 2.2rem;
+            }
+        }
+    }
+}
+
+.ronaldo-page, .shourco-page {
+
+    .hero {
+        img {
+            width: 60vw;
+            max-width: 30rem;
+            height: auto;
+            margin: 6rem auto;
+            @include svg-hov;
+        }
+    }
+
+    .page-1, .page-2, .page-3, .page-4, .page-5, .page-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80vw;
+            max-width: 50rem;
+            height: auto;
+            margin-top: 2rem;
+            @include svg-hov;
+        }
+    }
+}
+
+.ronaldo-page {
+    background-color: #CAFFF7;
+
+    header {
+        .hamburger-menu {
+            background-color: #CAFFF7;
+        }
+    
+        nav {
+            background-color: #CAFFF7;
+        }
+    }
+   
+    .key {
+        background: #BFEFE8;
+        box-shadow: 4px 4px 15px rgba(2, 68, 57, 0.72);
+
+        .row {
+            
+            .col-2 {
+                .circle {
+                    background-color: #0E2331;
+                }
+            }
+            .col-3 {
+                .circle {
+                    background-color: #3F7295;
+                }
+            }
+            .col-4 {
+                .circle {
+                    background-color: #7DBCB1;
+                }
+            }
+            .col-5 {
+                .circle {
+                    background-color: #D8FFF8;
+                }
+            }
+        }
+    }
+}
+
+.shourco-page {
+    background-color: #DCDCDC;
+
+    header {
+        .hamburger-menu {
+            background-color: #DCDCDC;
+        }
+    
+        nav {
+            background-color: #DCDCDC;
+        }
+    }
+   
+    .key {
+        background: #E0DADA;
+        box-shadow: 4px 4px 15px rgba(46, 46, 46, 0.72);
+
+        .row {
+            
+            .col-2 {
+                .circle {
+                    background-color: #2E2E2E;
+                }
+            }
+            .col-3 {
+                .circle {
+                    background-color: #0D0D0D;
+                }
+            }
+            .col-4 {
+                .circle {
+                    background-color: #FFFFFF;
+                }
+            }
+            .col-5 {
+                .circle {
+                    background-color: #B1ABAB;
+                }
+            }
+        }
+    }
+
+    .prev, .next {
+        padding: .8rem;
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            text-align: center;
+            width: 14.8rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .carsam-page, .letstalk-page, .ronaldo-page, .shourco-page {
+
+        h1 {
+            font-size: 3.6rem;
+    
+            span {
+                font-size: 8.6rem;
+            }
+        }
+    
+        h3 {
+            font-size: 2rem;
+        }
+
+        .hero {
+            margin: 8rem auto;
+            flex-direction: row;
+            justify-content: space-around;
+    
+            // img {
+            //     margin: auto 1rem;
+            // }
+
+            // svg {
+            //     margin: 0;
+            // }
+        }
+    
+        .key {
+            width: 84vw;
+            max-width: 70rem;
+    
+            .row {
+                flex-direction: row;
+
+                &:first-child {
+                    padding: 2.4rem 0 2.4rem 0;
+                }
+                &:last-child {
+                    padding-bottom: 2.4rem;
+                }
+            }
+    
+            .row {
+                .column {
+                    @include flexy;
+                    padding: 0;
+                    padding-right: .8rem;
+    
+                    &:first-child {
+                        padding: 0;
+                        padding-right: .8rem;
+                    }
+                    &:last-child {
+                        padding-right: 1.6rem;
+                    }
+
+                    h3 {
+                        margin-bottom: 1.2rem;
+                    }
+    
+                    .circle {
+                        width: 6rem;
+                        height: 6rem;
+                        margin-bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        section {
+            margin-bottom: 10rem;
+        }
+
+        footer {
+        
+            .footer-left {
+                h4 {
+                    color: black;
+                }
+            }
+
+            .footer-right {
+                .nav-list {
+                    li {
+                        a {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .carsam-page, .letstalk-page {
+
+        .hero {
+    
+            img {
+                margin: auto 1rem;
+            }
+
+            svg {
+                margin: 0;
+            }
+        }
+    
+        .act-2 {
+    
+            .info-1, .info-2, .info-3, .info-4, .info-5 {
+                width: 100%;
+                margin-bottom: 10rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+    
+                .vid-container, .pic {
+                    width: 40%;
+                    margin: 0;
+                }
+            }
+
+            .info-1 {
+                margin-top: 5rem;
+            }
+
+            .info-1, .info-3, .info-5 {
+                .text {
+                    padding-right: 2rem;
+                }
+            }
+    
+            .info-2, .info-4 {
+                flex-direction: row-reverse;
+                .text {
+                    padding-left: 4rem;
+                }
+            }
+        }
+
+        .act-3, .act-5 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row-reverse;
+
+        .text {
+            padding-left: 4rem;
+        }
+
+        .vid-cpntainer, .pic {
+            width: 40%;
+            margin: 0 1rem;
+        }
+        }
+
+        .act-4, .act-6 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            .vid-container, .pic {
+                margin: 0 1rem;
+                width: 40%;
+            }
+
+            .text {
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    .carsam-page {
+
+        .act-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .vid-container {
+                margin: 0 1rem;
+                width: 40%;
+            }
+
+            .text {
+                padding: 1rem;
+            }
+        }
+    
+        .collection {
+    
+            .screens {
+                width: 100%;
+                flex-direction: row;
+                margin-top: 4rem;
+                flex-wrap: wrap;
+            }
+    
+            img {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .ronaldo-page, .shourco-page {
+
+        .hero {
+            img {
+                margin: 0;
+            }
+        }
+    
+        .page-1, .page-3, .page-5 {
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+            
+            .text {
+                width: 50%;
+                padding-right: 2rem;
+            }
+    
+            img {
+                width: 50%;
+                height: auto;
+                margin-top: 0;
+            }
+        }
+
+        .page-2, .page-4, .page-6 {
+            flex-direction: row-reverse;
+            height: auto;
+            width: 100%;
+            
+            .text {
+                width: 50%;
+                padding-left: 2rem;
+            }
+    
+            img {
+                width: 50%;
+                height: auto;
+                margin-top: 0;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    .carsam-page, .letstalk-page, .ronaldo-page, .shourco-page {
+
+        h1 {
+            font-size: 4rem;
+    
+            span {
+                font-size: 10rem;
+            }
+        }
+    
+        h3 {
+            font-size: 2.2rem;
+        }
+
+        .hero {
+            margin: 10rem auto;
+        }
+    
+        .key {
+            margin-top: 8rem;
+        }
+    }
+
+    .carsam-page, .letstalk-page {
+
+        .act-2 {
+            
+            h3 {
+                margin-bottom: 2.4rem;
+            }
+
+            .info-1, .info-2, .info-3, .info-4, .info-5 {
+    
+                h4 {
+                    font-size: 2rem;
+                }
+            }
+
+            .info-1, .info-3, .info-5 {
+                .text {
+                    padding-right: 4rem;
+                }
+            }
+    
+            .info-2, .info-4 {
+                .text {
+                    padding-left: 5rem;
+                }
+            }
+        }
+    
+        .act-3, .act-5 {
+            .text {
+                padding-left: 5rem;
+            }
+        }
+
+        .act-4, .act-6 {
+            .text {
+                padding-right: 4rem;
+            }
+        }
+
+        section {
+            padding: 8rem;
+
+            img {
+                width: 384px;
+                height: auto;
+            }
+        }
+
+        .vid-container {
+            video {
+                border-radius: 32px;
+                width: 360px;
+                height: 780px;
+            }
+        }
+        
+        .vid-container::before {
+            width: 384px; 
+            height: 830px;
+            border-radius: 50px;
+        }
+    }
+
+    .carsam-page {
+
+        .act-1 {
+            
+            .text {
+                padding: 2rem;
+            }
+        }
+    
+        .act-2 {
+            
+            .info-1 {
+                h4 {
+                    width: 23rem;
+                }
+            }
+            .info-4 {
+                h4 {
+                    width: 26rem;
+                }
+            }
+            .info-5 {
+                h4 {
+                    width: 23.6rem;
+                }
+            }
+        }
+    
+        .collection {
+    
+            .screens {
+                margin-top: 6rem;
+            }
+    
+            img {
+                padding: 2rem;
+            }
+        }
+    }
+
+    .letstalk-page {
+
+        .act-2 {
+            
+            .info-1 {
+                h4 {
+                    width: 26rem;
+                }
+            }
+            .info-2 {
+                h4 {
+                    width: 23.5rem;
+                }
+            }
+            .info-3 {
+                h4 {
+                    width: 25rem;
+                }
+            }
+        }
+
+        .prev-next {
+            .next {
+                h3 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    line-height: 2.3rem;
+                }
+            }
+        }
+    }
+
+    .ronaldo-page, .shourco-page {
+    
+        section {
+            padding: 5rem;
+        }
+    
+        .page-1, .page-3, .page-5 {
+            
+            .text {
+                padding-right: 4rem;
+            }
+        }
+
+        .page-2, .page-4, .page-6 {
+            
+            .text {
+                padding-left: 4rem;
+            }
+        }
+        
+    }
+    
+    .shourco-page {
+    
+        .prev-next {
+    
+            .prev, .next {
+        
+                h3 {
+                    font-size: 1.8rem;
+                }
+        
+                p {
+                    font-size: 1.8rem;
+                    width: 17.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1450px) {
+
+    .carsam-page, .letstalk-page, .ronaldo-page, .shourco-page {
+        border: 2px dashed black;
+
+        section::before {
+            content: "";
+            max-width: 100%;
+        }
+    }
+}
