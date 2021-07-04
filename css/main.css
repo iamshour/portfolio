@@ -8,6 +8,10 @@ html {
   height: 100%;
 }
 
+svg:not(:root) {
+  overflow: visible;
+}
+
 .html-sec {
   overflow-x: hidden;
 }
@@ -2005,12 +2009,18 @@ header nav .on-hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  place-content: center;
-  margin: 6rem auto 4rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6rem 0 4rem 0;
 }
 
 .directions svg {
-  margin: 0 1.6rem;
+  height: auto;
+  width: 85%;
   max-width: 50rem;
 }
 

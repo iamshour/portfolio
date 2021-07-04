@@ -20,6 +20,10 @@ html {
     height: 100%;
 }
 
+svg:not(:root) {
+    overflow: visible;
+}
+
 .html-sec {
     overflow-x: hidden;
 }
