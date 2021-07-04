@@ -419,9 +419,12 @@ main {
         @include flexy;
         padding: 0 3rem;
 
+        a {
+            @include svg-hov;
+        }
+
         a, div {
             margin-bottom: 4rem;
-            @include svg-hov;
 
             img {
                 width: 100%;
