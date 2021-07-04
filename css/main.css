@@ -3446,6 +3446,9 @@ header nav .on-hover {
 }
 
 @media only screen and (min-width: 1450px) {
+  .about-nav {
+    border-radius: 32px 32px 0 0;
+  }
   .degrees-page .hero img {
     width: 34rem;
   }
