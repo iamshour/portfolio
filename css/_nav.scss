@@ -68,11 +68,11 @@ header {
             font-size: 2.2rem;
             font-weight: bold;
             user-select: none;
-            padding: 2rem auto;
+            margin-top: -5rem;
 
             li  {
                 display: block;
-                padding: 2.4rem;
+                padding: 2.2rem;
 
                 a {
                     transition: all 1s ease-out;
@@ -87,7 +87,7 @@ header {
 
         .nav-bottom {
             position: absolute;
-            bottom: 0;
+            bottom: 90px;
             left: 0;
             right: 0;
             width: 100%;
@@ -97,9 +97,7 @@ header {
             h4 {
                 font-size: 2.2rem;
                 font-weight: 400;
-            }
-            .social-box {
-                padding: 3rem;
+                margin-bottom: 4rem;
             }
         }
 
@@ -151,7 +149,7 @@ header {
                 justify-content: flex-end;
                 width: auto;
                 font-size: 2rem;
-                padding: 0;
+                margin-top: 0;
     
                 li  {
                     margin-right: 3.4rem;
