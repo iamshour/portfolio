@@ -5,10 +5,14 @@ nav {
 header {
     height: 10vh;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .logo{
-        width: 14rem;
-        margin: 2.4rem 0 0 2.4rem;
+        width: 12rem;
+        height: auto;
+        margin-left: 2rem;
         user-select: none;
         overflow: visible;
     }

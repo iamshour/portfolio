@@ -686,11 +686,21 @@ nav {
 header {
   height: 10vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .logo {
-  width: 14rem;
-  margin: 2.4rem 0 0 2.4rem;
+  width: 12rem;
+  height: auto;
+  margin-left: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -3934,11 +3944,6 @@ header nav .on-hover {
 
 .thanks-page {
   background: #7DDAF5;
-  overflow-y: hidden;
-}
-
-.thanks-page .back-btn {
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3952,7 +3957,28 @@ header nav .on-hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 4rem;
+}
+
+.thanks-page .back-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0 0 2rem;
+  opacity: 0;
+  -webkit-animation: back-ease 1.4s ease-in forwards 1.2s;
+          animation: back-ease 1.4s ease-in forwards 1.2s;
 }
 
 .thanks-page .back-btn .home {
@@ -4018,8 +4044,12 @@ header nav .on-hover {
 }
 
 .thanks-page .thanks {
-  margin: 0 .8rem;
+  width: 95%;
   max-width: 105rem;
+  max-height: 80vh;
+  opacity: 0;
+  -webkit-animation: svg-ease 1.4s ease-in forwards;
+          animation: svg-ease 1.4s ease-in forwards;
 }
 
 .thanks-page .thanks a {
@@ -4034,6 +4064,58 @@ header nav .on-hover {
   transition: all .3s ease-in;
   -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
           filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+}
+
+@-webkit-keyframes back-ease {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes back-ease {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes svg-ease {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes svg-ease {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 1080px) {
@@ -4053,9 +4135,7 @@ header nav .on-hover {
             align-items: center;
   }
   .thanks-page .back-btn {
-    margin-top: 2rem;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    margin-left: 4rem;
   }
   .thanks-page .back-btn .home {
     position: relative;
@@ -4076,7 +4156,7 @@ header nav .on-hover {
   }
   .thanks-page .thanks {
     margin: 0;
-    margin-top: -6rem;
+    margin-top: -8rem;
   }
 }
 

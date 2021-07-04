@@ -1,11 +1,13 @@
 .thanks-page {
     background: $bg-very-light;
-    overflow-y: hidden;
-
+    @include flexy;
+    
     .back-btn {
-        width: 40%;
+        align-self: flex-start;
         @include flexy;
-        margin-top: 4rem;
+        margin: 4rem 0 0 2rem;
+        opacity: 0;
+        animation: back-ease 1.4s ease-in forwards 1.2s;
 
         .home {
             position: relative;
@@ -68,11 +70,35 @@
     }
 
     .thanks {
-        margin: 0 .8rem;
+        width: 95%;
         max-width: 105rem;
+        max-height: 80vh;
+        opacity: 0;
+        animation: svg-ease 1.4s ease-in forwards;
 
         a {
          @include svg-hov;   
+        }
+    }
+
+    @keyframes back-ease {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes svg-ease {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }
@@ -82,8 +108,7 @@
         @include flexy;
 
         .back-btn {
-            margin-top: 2rem;
-            align-self: flex-start;
+            margin-left: 4rem;
             
             .home {
                 position: relative;
@@ -109,7 +134,7 @@
 
         .thanks {
             margin: 0;
-            margin-top: -6rem;
+            margin-top: -8rem;
         }
     }
 }
