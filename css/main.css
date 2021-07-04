@@ -4116,6 +4116,7 @@ main {
           user-select: none;
   position: relative;
   padding-bottom: 17rem;
+  -webkit-margin-before: 0;
 }
 
 main::before {
@@ -4754,12 +4755,16 @@ main .img-area {
   background: -webkit-gradient(linear, left top, left bottom, from(#7DDAF5), to(#84A6D9));
   background: linear-gradient(180deg, #7DDAF5 0%, #84A6D9 100%);
   overflow-x: hidden;
-  padding-bottom: 10rem;
+  padding: 10rem 0;
 }
 
 .sec-3 h2 {
   font-size: 3.2rem;
-  margin: 10rem auto 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  margin-bottom: 5rem;
 }
 
 .sec-3 .proj-container {
@@ -4809,17 +4814,15 @@ main .img-area {
   border-radius: 8px;
 }
 
-.sec-3 .proj-container .proj-8:hover, .sec-3 .proj-container .proj-8:active {
+.sec-3 .proj-container .proj-8 {
   cursor: pointer;
-  -webkit-transition: all .4s ease-in;
-  transition: all .4s ease-in;
   position: relative;
 }
 
-.sec-3 .proj-container .proj-8:hover::before, .sec-3 .proj-container .proj-8:active::before {
+.sec-3 .proj-container .proj-8::before {
   position: absolute;
   content: 'Tattoo designer app using react! Coming Soon!';
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: white;
   text-align: center;
   display: -webkit-box;
@@ -4839,6 +4842,14 @@ main .img-area {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: .8rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.sec-3 .proj-container .proj-8:hover::before, .sec-3 .proj-container .proj-8:active::before {
+  opacity: 1;
 }
 
 .sec-4 {
@@ -4873,6 +4884,7 @@ main .img-area {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   font-size: 3.2rem;
+  z-index: 4;
 }
 
 .sec-4 .resume-ill {
@@ -4899,6 +4911,8 @@ main .img-area {
   max-width: 50rem;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
+  position: relative;
+  right: -2px;
 }
 
 .sec-4 .resume-ill .resume-svg:hover {
@@ -5808,10 +5822,7 @@ footer .copyright p {
     margin-bottom: 0;
   }
   .sec-3 {
-    padding-bottom: 15rem;
-  }
-  .sec-3 h2 {
-    margin: 14rem auto 4rem 3rem;
+    padding: 15rem 0;
   }
   .sec-3 .proj-container {
     display: -ms-grid;
@@ -5848,8 +5859,14 @@ footer .copyright p {
   .sec-3 .proj-container .proj-3 img, .sec-3 .proj-container .proj-5 img, .sec-3 .proj-container .proj-7 img {
     border-radius: 8px;
   }
-  .sec-4 h3 {
-    padding: 5rem 0 7rem 0;
+  .sec-4 {
+    padding-top: 6rem;
+  }
+  .sec-4::before {
+    height: 20rem;
+  }
+  .sec-4 h2 {
+    top: -2rem;
   }
   .sec-5 .form {
     width: 60vw;
@@ -5971,14 +5988,21 @@ footer .copyright p {
   .sec-3 .proj-container .proj-3 img, .sec-3 .proj-container .proj-5 img, .sec-3 .proj-container .proj-7 img {
     border-radius: 12px;
   }
-  .sec-4 h3 {
-    padding: 5rem 0 7rem 0;
+  .sec-4 {
+    padding-top: 7rem;
+  }
+  .sec-4::before {
+    height: 24rem;
+  }
+  .sec-4 h2 {
+    top: -1rem;
   }
   .sec-4 .resume-ill {
     padding-bottom: 10rem;
   }
   .sec-4 .resume-ill .resume-svg {
     width: 60rem;
+    right: -4px;
   }
   .sec-5 {
     -webkit-box-orient: horizontal;

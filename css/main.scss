@@ -54,6 +54,7 @@ main {
     user-select: none;
     position: relative;
     padding-bottom: 17rem;
+    -webkit-margin-before: 0;
 
     &::before {
         position: absolute;
@@ -401,12 +402,14 @@ main {
 .sec-3 {
     background: $top-bottom-grad-3;
     overflow-x: hidden;
-    padding-bottom: 10rem;
+    padding: 10rem 0;
 
 
     h2 {
         font-size: 3.2rem;
-        margin: 10rem auto 4rem 2rem;
+        display: flex;
+        place-content: center;
+        margin-bottom: 5rem;
     }
 
     .proj-container {
@@ -437,15 +440,14 @@ main {
             }
         }
 
-        .proj-8:hover, .proj-8:active {
+        .proj-8 {
             cursor: pointer;
-            transition: all .4s ease-in;
             position: relative;
 
             &::before {
                 position: absolute;
                 content: 'Tattoo designer app using react! Coming Soon!';
-                font-size: 2rem;
+                font-size: 2.4rem;
                 color: white;
                 text-align: center;
                 @include flexy;
@@ -453,6 +455,18 @@ main {
                 height: 100%;
                 background-color: rgba(0, 0, 0, .4);
                 border-radius: .8rem;
+                opacity: 0;
+                -webkit-transition: opacity 1s ease;
+                -moz-transition: opacity 1s ease;
+                -ms-transition: opacity 1s ease;
+                -o-transition: opacity 1s ease;
+                transition:  opacity 1s ease-out;
+            }
+
+            &:hover, &:active {
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -485,6 +499,7 @@ main {
         left: 50%;
         transform: translate(-50%);
         font-size: 3.2rem;
+        z-index: 4;
     }
 
     .resume-ill {
@@ -497,6 +512,8 @@ main {
             width: 80%;
             max-width: 50rem;
             @include svg-hov;
+            position: relative;
+            right: -2px;
 
             #resume-text {
                 animation: r-text 4s ease-in-out infinite;
@@ -1089,11 +1106,7 @@ footer {
     }
 
     .sec-3 {
-        padding-bottom: 15rem;
-    
-        h2 {
-            margin: 14rem auto 4rem 3rem;
-        }
+        padding: 15rem 0;
     
         .proj-container {
             display: grid;
@@ -1123,9 +1136,14 @@ footer {
     }
     
     .sec-4 {
-    
-        h3 {
-            padding: 5rem 0 7rem 0;
+        padding-top: 6rem;
+
+        &::before {
+            height: 20rem;
+        }
+
+        h2 {
+            top: -2rem;
         }
     }
 
@@ -1292,9 +1310,14 @@ footer {
     }
 
     .sec-4 {
-    
-        h3 {
-            padding: 5rem 0 7rem 0;
+        padding-top: 7rem;
+
+        &::before {
+            height: 24rem;
+        }
+
+        h2 {
+            top: -1rem;
         }
 
         .resume-ill {
@@ -1302,6 +1325,7 @@ footer {
     
             .resume-svg {
                 width: 60rem;
+                right: -4px;
             }
         }
 
