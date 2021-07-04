@@ -8,12 +8,12 @@ html {
   height: 100%;
 }
 
-svg:not(:root) {
-  overflow: visible;
+.html-sec {
+  overflow-x: visible;
 }
 
-.html-sec {
-  overflow-x: hidden;
+svg:not(:root) {
+  overflow: visible;
 }
 
 body {
@@ -423,12 +423,13 @@ footer h4, footer .social-box, footer .footer-right {
 }
 
 .bio-page:before, .degrees-page:before, .hobbies-page:before, .frontend-1:before, .frontend-2:before, .frontend-3:before {
-  position: absolute;
+  position: fixed;
   content: '';
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   top: 0;
+  bottom: 0;
   left: 0;
   z-index: 124;
   -webkit-animation: dark 2s ease forwards 1s;
@@ -944,14 +945,6 @@ header nav .on-hover {
   color: white;
 }
 
-.carsam-page header .nav-list #item2, .letstalk-page header .nav-list #item2, .ronaldo-page header .nav-list #item2, .shourco-page header .nav-list #item2 {
-  color: black;
-}
-
-.carsam-page header .nav-list #item2:active, .letstalk-page header .nav-list #item2:active, .ronaldo-page header .nav-list #item2:active, .shourco-page header .nav-list #item2:active {
-  color: white;
-}
-
 .carsam-page header .nav-bottom h4, .letstalk-page header .nav-bottom h4, .ronaldo-page header .nav-bottom h4, .shourco-page header .nav-bottom h4 {
   color: black;
 }
@@ -969,7 +962,7 @@ header nav .on-hover {
   z-index: -1;
   position: absolute;
   content: "";
-  width: 200%;
+  width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
@@ -2318,7 +2311,7 @@ header nav .on-hover {
   z-index: -1;
   position: absolute;
   content: "";
-  width: 200%;
+  width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
@@ -2628,10 +2621,11 @@ header nav .on-hover {
 .hobbies-page .hero {
   width: 100%;
   height: auto;
-  margin: 8rem 2rem;
+  margin: 8rem 0;
 }
 
 .hobbies-page .hero .card {
+  margin-left: 2rem;
   background: #B4E6F4;
   border: .2rem solid #94C6E0;
   border-radius: .6rem 4.6rem;
@@ -2681,7 +2675,7 @@ header nav .on-hover {
   z-index: -1;
   position: absolute;
   content: "";
-  width: 200%;
+  width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.4)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
@@ -2975,8 +2969,12 @@ header nav .on-hover {
 .degrees-page .hero {
   width: 100%;
   height: auto;
-  margin: 10rem 0 14rem 2rem;
+  margin: 10rem 0 14rem 0;
   position: relative;
+}
+
+.degrees-page .hero img {
+  margin-left: 2rem;
 }
 
 .degrees-page .hero::before {
@@ -2989,7 +2987,7 @@ header nav .on-hover {
   border-radius: 1.6rem;
   padding: 1rem;
   max-width: 80vw;
-  left: 0;
+  left: 2rem;
   bottom: -8rem;
   font-weight: 700;
   font-style: italic;
@@ -3046,12 +3044,13 @@ header nav .on-hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 8rem 2rem;
+  margin-bottom: 8rem;
 }
 
 .degrees-page .title p {
   position: relative;
   padding: 1.6rem 2rem 1.6rem 1.6rem;
+  margin-left: 1rem;
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
@@ -3290,7 +3289,6 @@ header nav .on-hover {
     margin-right: 3rem;
   }
   .hobbies-page .hero {
-    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3302,7 +3300,7 @@ header nav .on-hover {
             align-items: center;
   }
   .hobbies-page .hero .card {
-    margin: 8rem 3rem;
+    margin-left: 3rem;
   }
   .hobbies-page .hero .clock {
     margin-right: 4rem;
@@ -3343,7 +3341,7 @@ header nav .on-hover {
   .hobbies-page .hobby-2 .ill svg {
     width: 50rem;
   }
-  .degrees-page .hero, .degrees-page .title {
+  .degrees-page .hero img, .degrees-page .title p {
     margin-left: 3rem;
   }
   .degrees-page section {

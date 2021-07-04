@@ -37,14 +37,6 @@
                     }
                 }
             }
-    
-            #item2 {
-                color: black;
-    
-                &:active {
-                    color: white;
-                }
-            }
         }
     
         .nav-bottom {
@@ -675,14 +667,6 @@
             margin: 8rem auto;
             flex-direction: row;
             justify-content: space-around;
-    
-            // img {
-            //     margin: auto 1rem;
-            // }
-
-            // svg {
-            //     margin: 0;
-            // }
         }
     
         .key {

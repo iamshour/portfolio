@@ -13,18 +13,20 @@ const mobileBtn = document.getElementById('hamburger')
 
 mobileBtn.addEventListener('click', () => {
     nav.classList.add('menu-btn');
-})
+    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+});
 
 mobileBtnExit.addEventListener('click', () => {
     nav.classList.remove('menu-btn');
-})
+    document.getElementsByTagName('body')[0].style.overflowY = "visible";
+});
 
 navList.forEach((item) => {
     item.addEventListener("click", () => {
         nav.classList.remove('menu-btn');
+        document.getElementsByTagName('body')[0].style.overflowY = "visible";
     });
 });
-
 
 
 // Modal

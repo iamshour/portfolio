@@ -20,12 +20,12 @@ html {
     height: 100%;
 }
 
-svg:not(:root) {
-    overflow: visible;
+.html-sec {
+    overflow-x: visible;
 }
 
-.html-sec {
-    overflow-x: hidden;
+svg:not(:root) {
+    overflow: visible;
 }
 
 body {
@@ -107,7 +107,7 @@ ul {
         z-index: -1;
         position: absolute;
         content: "";
-        width: 200%;
+        width: 100%;
         height: 100%;
         background: $glass;
         filter: blur(30px);
@@ -331,12 +331,13 @@ footer {
 .bio-page, .degrees-page, .hobbies-page, .frontend-1, .frontend-2, .frontend-3 {
     
     &:before {
-        position: absolute;
+        position: fixed;
         content: '';
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         top: 0;
+        bottom: 0;
         left: 0;
         z-index: 124;
         animation: dark 2s ease forwards 1s;

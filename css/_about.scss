@@ -390,9 +390,10 @@
     .hero {
         width: 100%;
         height: auto;
-        margin: 8rem 2rem;
+        margin: 8rem 0;
 
         .card {
+            margin-left: 2rem;
             background: #B4E6F4;
             border: .2rem solid #94C6E0;
             border-radius: .6rem 4.6rem;
@@ -568,8 +569,12 @@
     .hero {
         width: 100%;
         height: auto;
-        margin: 10rem 0 14rem 2rem;
+        margin: 10rem 0 14rem 0;
         position: relative;
+
+        img {
+            margin-left: 2rem;
+        }
             
         &::before {
             position: absolute;
@@ -580,7 +585,7 @@
             border-radius: 1.6rem;
             padding: 1rem;
             max-width: 80vw;
-            left: 0;
+            left: 2rem;
             bottom: -8rem;
             font-weight: 700;
             font-style: italic;
@@ -610,16 +615,16 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 0 8rem 2rem;
+        margin-bottom: 8rem;
         
         p {
             position: relative;
             padding: 1.6rem 2rem 1.6rem 1.6rem;
+            margin-left: 1rem;
             font-size: 2rem;
             font-weight: 700;
             font-style: italic;
             color: $bg-dark;
-            
 
             &::before {
                 position: absolute;
@@ -813,13 +818,12 @@
     .hobbies-page {
 
         .hero {
-            margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             .card {
-                margin: 8rem 3rem;
+                margin-left: 3rem;
             }
     
             .clock {
@@ -868,7 +872,7 @@
 
     .degrees-page {
 
-        .hero, .title {
+        .hero img, .title p {
             margin-left: 3rem;
         }
 
