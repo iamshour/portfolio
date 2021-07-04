@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  height: 100%;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -4116,7 +4115,6 @@ main {
           user-select: none;
   position: relative;
   padding-bottom: 17rem;
-  -webkit-margin-before: 0;
 }
 
 main::before {
@@ -4369,6 +4367,7 @@ main .img-area {
       -ms-user-select: none;
           user-select: none;
   width: 100%;
+  height: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#164690), to(#164690)), -webkit-gradient(linear, left top, left bottom, from(#698EC5), to(#698EC5));
   background-image: linear-gradient(#164690, #164690), linear-gradient(#698EC5, #698EC5);
   background-repeat: no-repeat, no-repeat;

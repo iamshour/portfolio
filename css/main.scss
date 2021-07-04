@@ -54,8 +54,7 @@ main {
     user-select: none;
     position: relative;
     padding-bottom: 17rem;
-    -webkit-margin-before: 0;
-
+    
     &::before {
         position: absolute;
         content: '';
@@ -224,10 +223,12 @@ main {
     z-index: 5;
     user-select: none;
     width: 100%;
+    height: auto;
     background-image: linear-gradient($bg-dark, $bg-dark), linear-gradient($bg-light, $bg-light);
     background-repeat: no-repeat, no-repeat;
     background-position: left, right;
     background-size: 50%;
+
     @include flexy;
 
     .title {
