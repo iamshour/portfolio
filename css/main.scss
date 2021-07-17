@@ -357,6 +357,7 @@ main {
     margin-top: -2px;
     padding-top: 8rem;
     width: 100%;
+    height: auto;
     background-image: $top-bottom-grad-1, $top-bottom-grad-2;
     background-repeat: no-repeat, no-repeat;
     background-position: left, right;
@@ -404,7 +405,8 @@ main {
     background: $top-bottom-grad-3;
     overflow-x: hidden;
     padding: 10rem 0;
-
+    width: 100%;
+    height: auto;
 
     h2 {
         font-size: 3.2rem;
@@ -429,12 +431,6 @@ main {
             img {
                 width: 100%;
                 max-width: 38.4rem;
-            }
-        }
-
-        .proj-4 {
-            img {
-                max-width: 79.8rem;
             }
         }
 
@@ -478,6 +474,7 @@ main {
 
 .sec-4 {
     width: 100%;
+    height: auto;
     background-color: $bg-light;
     margin-top: -2px;
     position: relative;
@@ -573,6 +570,8 @@ main {
 }
 
 .sec-5 {
+    width: 100%;
+    height: auto;
     margin-top: -2px;
     padding-top: 10rem;
     background-image: $top-bottom-grad-2;
@@ -846,6 +845,7 @@ main {
 
 .freelance {
     width: 100%;
+    height: auto;
     margin: 12rem 0 2rem 0;
     @include flexy;
 
@@ -1129,8 +1129,12 @@ footer {
             }
             .proj-4 {
                 grid-area: 3/1/4/3;
+
+                img {
+                    max-width: 79.8rem;
+                }
             }
-    
+
             .proj-3, .proj-5, .proj-7 {
                 img {
                     border-radius: 8px;
@@ -1141,7 +1145,7 @@ footer {
     
     .sec-4 {
         padding-top: 6rem;
-
+        
         &::before {
             height: 20rem;
         }

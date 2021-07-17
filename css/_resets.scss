@@ -33,7 +33,7 @@ body {
     overflow-x: hidden;
 }
 
-*, *:before, *:after, body {
+*, *::before, *::after, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

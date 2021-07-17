@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-*, *:before, *:after, body {
+*, *::before, *::after, body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -4751,6 +4751,7 @@ main .img-area {
   margin-top: -2px;
   padding-top: 8rem;
   width: 100%;
+  height: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#164690), to(#7DDAF5)), -webkit-gradient(linear, left top, left bottom, from(#698EC5), to(#7DDAF5));
   background-image: linear-gradient(180deg, #164690 0%, #7DDAF5 100%), linear-gradient(180deg, #698EC5 0%, #7DDAF5 100%);
   background-repeat: no-repeat, no-repeat;
@@ -4837,6 +4838,8 @@ main .img-area {
   background: linear-gradient(180deg, #7DDAF5 0%, #84A6D9 100%);
   overflow-x: hidden;
   padding: 10rem 0;
+  width: 100%;
+  height: auto;
 }
 
 .sec-3 h2 {
@@ -4890,10 +4893,6 @@ main .img-area {
   max-width: 38.4rem;
 }
 
-.sec-3 .proj-container .proj-4 img {
-  max-width: 79.8rem;
-}
-
 .sec-3 .proj-container .proj-3 img, .sec-3 .proj-container .proj-5 img, .sec-3 .proj-container .proj-7 img {
   border-radius: 8px;
 }
@@ -4938,6 +4937,7 @@ main .img-area {
 
 .sec-4 {
   width: 100%;
+  height: auto;
   background-color: #698EC5;
   margin-top: -2px;
   position: relative;
@@ -5120,6 +5120,8 @@ main .img-area {
 }
 
 .sec-5 {
+  width: 100%;
+  height: auto;
   margin-top: -2px;
   padding-top: 10rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#698EC5), to(#7DDAF5));
@@ -5541,6 +5543,7 @@ main .img-area {
 
 .freelance {
   width: 100%;
+  height: auto;
   margin: 12rem 0 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5939,6 +5942,9 @@ footer .copyright p {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: 3/1/4/3;
+  }
+  .sec-3 .proj-container .proj-4 img {
+    max-width: 79.8rem;
   }
   .sec-3 .proj-container .proj-3 img, .sec-3 .proj-container .proj-5 img, .sec-3 .proj-container .proj-7 img {
     border-radius: 8px;
