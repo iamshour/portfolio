@@ -49,6 +49,7 @@
 
 main {
     width: 100%;
+    height: auto;
     @include flexy;
     margin-top: 6rem;
     user-select: none;
@@ -63,7 +64,7 @@ main {
         background-image: linear-gradient($bg-dark, $bg-dark), linear-gradient($bg-light, $bg-light);
         background-repeat: no-repeat, no-repeat;
         background-position: left, right;
-        background-size: 50%;
+        background-size: 50% 100%;
         width: 100%;
         height: 15rem;
         z-index: 4;
@@ -227,7 +228,7 @@ main {
     background-image: linear-gradient($bg-dark, $bg-dark), linear-gradient($bg-light, $bg-light);
     background-repeat: no-repeat, no-repeat;
     background-position: left, right;
-    background-size: 50%;
+    background-size: 50% 100%;
 
     @include flexy;
 
@@ -361,7 +362,7 @@ main {
     background-image: $top-bottom-grad-1, $top-bottom-grad-2;
     background-repeat: no-repeat, no-repeat;
     background-position: left, right;
-    background-size: 50%;
+    background-size: 50% 100%;
     @include flexy;
 
     h2 {
@@ -487,7 +488,6 @@ main {
         content: '';
         top: 0;
         clip-path: polygon(50% 32%, 0 0, 100% 0);
-        -webkit-clip-path: polygon(50% 32%, 0 0, 100% 0);
         background-color: #84A6D9;
         width: 100%;
         height: 10rem;
